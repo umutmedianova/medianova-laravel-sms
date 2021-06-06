@@ -1,0 +1,31 @@
+{
+    "name": "medianova/laravel-sms",
+    "description": "SMS Package for laravel",
+    "license": "mit",
+    "authors": [{
+        "name": "Umut Cetinkaya",
+        "email": "umut.cetinkaya@medianova.com"
+    }],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5.5|^7.0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Medianova\\LaravelSms\\Tests\\": "tests/",
+            "Medianova\\LaravelSms\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Medianova\\LaravelSms\\LaravelSmsServiceProvider"
+            ],
+            "aliases": {
+                "Sms": "Medianova\\LaravelSms\\Facades\\Sms"
+            }
+        }
+    }
+}
