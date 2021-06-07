@@ -40,7 +40,7 @@ Sms::to('0905551234567')
     ->send('Hello World');
 ```
 
-## Add New SMS Gateway
+## Or use by choosing a provider
 
 ```php
 Sms::provider('oztek')
