@@ -10,8 +10,8 @@ class OztekGateway implements SmsInterface
     public function sendSms($to, $msg)
     {
 
-        $url = config('sms.oztek.url') || 'http://www.ozteksms.com/panel/smsgonder1Npost.php';
-        $type = config('sms.oztek.type') || 'Normal';
+        $url = config('sms.oztek.url');
+        $type = config('sms.oztek.type');
         $number = config('sms.oztek.number');
         $username = config('sms.oztek.username');
         $password = config('sms.oztek.password');

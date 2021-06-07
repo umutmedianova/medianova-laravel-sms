@@ -57,7 +57,7 @@ class GatewayManager
     public function send($msg)
     {
         try {
-            $this->provider->sendSms($this->to, $msg);
+            return $this->provider->sendSms($this->to, $msg);
         } catch (LaravelSmsGatewayException $e) {
             $current_provider = $this->provider;
             $fallbak_provider = $this->provider(config('sms.fallback_provider'));
@@ -77,9 +77,10 @@ class GatewayManager
                 ]);
                 throw new LaravelSmsException($e->getMessage(), 1);
             }
-            $this->provider(config('sms.fallback_provider'))->send($msg);
+            return $this->provider(config('sms.fallback_provider'))->send($msg);
         }
     }
+    
     protected function _isEnableFallback()
     {
         return (config('sms.fallback_provider') == null?false:true);
