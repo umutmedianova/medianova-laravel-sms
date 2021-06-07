@@ -178,3 +178,4 @@ fabric.properties
 /vendor
 /.idea
 composer.lock
+.phpunit.result.cache
