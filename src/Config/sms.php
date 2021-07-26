@@ -11,4 +11,12 @@ return [
         'orginator'=>env('OZTEK_ORGINATOR', 'XXXXXXX'),
         'type' => env('OZTEK_TYPE','Normal'), // Normal ya da Turkce
     ],
+    'smspaneli'=>[
+        'url' => env('SMS_PANELI_URL','https://xmlapi.smspaneli.com/xmlsms.php'),
+        'number'=>env('SMS_PANELI_NUMBER', 'XXXXXXXXX.XXXXXXXXX.XXXXXXXXX'),
+        'username'=>env('SMS_PANELI_USERNAME', 'XXXXXXX'),
+        'password'=>env('SMS_PANELI_PASSWORD', 'XXXXXXX'),
+        'orginator'=>env('SMS_PANELI_ORGINATOR', 'XXXXXXX'),
+        'type' => env('SMS_PANELI_TYPE','1'), // 1 = NORMAL, 2 = FLASH, 3 = TÜRKÇE, 4 = NUMERIC, 5 = TÜRÇKE NUMERIC
+    ],
 ];
