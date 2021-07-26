@@ -3,6 +3,7 @@
 ### Support Gateways
 
 - oztek // (ozteksms.com)
+- smspaneli // (smspaneli.com)
 
 ### Installation
 
