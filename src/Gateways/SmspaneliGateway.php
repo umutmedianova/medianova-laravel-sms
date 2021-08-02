@@ -17,14 +17,14 @@ class SmsPaneliGateway implements SmsInterface
         $password = config('sms.smspaneli.password');
         $orginator = config('sms.smspaneli.orginator');
 
-       $xmlString = '<PACKET>
-                     	<USERNAME>'.$username.'</USERNAME>
-                     	<PASSWORD>'.$password.'</PASSWORD>
-                     	<ORIGINATOR>'.$orginator.'</ORIGINATOR>
-                     	<PHONENUMBER>'.$to.'</PHONENUMBER>
-                     	<MESSAGE><![CDATA['.$msg.']]></MESSAGE>
-                     	<MESSAGETYPE>'.$type.'</MESSAGETYPE>
-                     </PACKET>'
+        $xmlString = '<?xml version=\"1.0\" ?><PACKET>
+               <USERNAME>'.$username.'</USERNAME>
+               <PASSWORD>'.$password.'</PASSWORD>
+               <ORIGINATOR>'.$orginator.'</ORIGINATOR>
+               <PHONENUMBER>'.$to.'</PHONENUMBER>
+               <MESSAGE><![CDATA['.$msg.']]></MESSAGE>
+               <MESSAGETYPE>'.$type.'</MESSAGETYPE>
+              </PACKET>';
 
         try {
 
